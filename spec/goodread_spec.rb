@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe "packspec" do
+RSpec.describe "goodread" do
   it "has a version number" do
     expect(true).to match true
   end

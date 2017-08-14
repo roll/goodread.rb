@@ -3,14 +3,14 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = "packspec"
-  spec.version       = "0.1.6"
+  spec.name          = "goodread"
+  spec.version       = "0.1.0"
   spec.authors       = ["Evgeny Karev\n"]
   spec.email         = ["eskarev@gmail.com"]
 
-  spec.summary       = %q{packspec}
-  spec.description   = %q{packspec}
-  spec.homepage      = "https://github.com/packspec/packspec-rb"
+  spec.summary       = %q{goodread}
+  spec.description   = %q{goodread}
+  spec.homepage      = "https://github.com/goodread/goodread-rb"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.bindir        = "bin"
-  spec.executables   = ["packspec-rb"]
+  spec.executables   = ["goodread-rb"]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.14"
