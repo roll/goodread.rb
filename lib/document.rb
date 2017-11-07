@@ -90,12 +90,13 @@ class Document
     end
 
     # Remote document
+    # TODO: supress commands output
     if !@edit_path.start_with?('http')
-      Kernel.system(['editor', @edit_path])
+      Kernel.system('editor', @edit_path)
 
     # Local document
     else
-      Kernel.system(['xdg-open', @edit_path])
+      Kernel.system('xdg-open', @edit_path)
     end
 
   end
