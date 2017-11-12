@@ -25,7 +25,7 @@ def read_config()
 end
 
 
-def instrument_codeblock(codeblock)
+def run_codeblock(codeblock, scope)
   lines = []
   for line in codeblock.strip().split("\n")
     if line.include?(' # ')
@@ -39,7 +39,15 @@ def instrument_codeblock(codeblock)
     end
     lines.push(line)
   end
-  return lines.join("\n")
+  exception_line = 1000 # infiinity
+  exception = nil
+  begin
+    eval(lines.join("\n"), scope)
+  rescue Exception => exc
+    exception = exc
+    exception_line = 1
+  end
+  return [exception, exception_line]
 end
 
 

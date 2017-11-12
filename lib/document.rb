@@ -90,13 +90,13 @@ class Document
     end
 
     # Remote document
-    # TODO: supress commands output
-    if !@edit_path.start_with?('http')
-      Kernel.system('editor', @edit_path)
+    if @edit_path.start_with?('http')
+      Kernel.system('xdg-open', @edit_path)
 
     # Local document
+    # TODO: supress commands output
     else
-      Kernel.system('xdg-open', @edit_path)
+      Kernel.system('editor', @edit_path)
     end
 
   end
@@ -222,14 +222,7 @@ def _validate_document(elements, exit_first:false)
 
     # Codeblock
     elsif element['type'] == 'codeblock'
-      exception_line = 1000  # infinity
-      begin
-        eval(instrument_codeblock(element['value']), scope)
-      rescue Exception => exc
-        exception = exc
-        # TODO: get a real exception line
-        exception_line = 1
-      end
+      exception, exception_line = run_codeblock(element['value'], scope)
       lines = element['value'].strip().split("\n")
       for line, index in lines.each_with_index
         line_number = index + 1
