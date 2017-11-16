@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Evgeny Karev\n"]
   spec.email         = ["eskarev@gmail.com"]
 
-  spec.summary       = "Test runner for README.md. Support for Python/JavaScript/Ruby/PHP code blocks. Integration with hackmd.io."
-  spec.description   = "Test runner for README.md. Support for Python/JavaScript/Ruby/PHP code blocks. Integration with hackmd.io."
+  spec.summary       = "Doctest for markdown with comment-based assertions. Python/JavaScript/Ruby/PHP test runners and hackmd.io integration."
+  spec.description   = "Doctest for markdown with comment-based assertions. Python/JavaScript/Ruby/PHP test runners and hackmd.io integration."
   spec.homepage      = "https://github.com/goodread/goodread-rb"
   spec.license       = "MIT"
 
