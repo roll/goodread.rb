@@ -4,6 +4,6 @@
 [![Coveralls](http://img.shields.io/coveralls/goodread/goodread-rb.svg?branch=master)](https://coveralls.io/r/goodread/goodread-rb?branch=master)
 [![Gem Version](http://img.shields.io/gem/v/goodread.svg)](https://rubygems.org/gems/goodread)
 
-Test runner for README.md. Support for Python/JavaScript/Ruby/PHP code blocks. Integration with hackmd.io. Read more about the project:
+Doctest for markdown with comment-based assertions. Python/JavaScript/Ruby/PHP test runners and hackmd.io integration. Read more about the project:
 
 - https://github.com/goodread/goodread
